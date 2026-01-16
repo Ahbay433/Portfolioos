@@ -5,21 +5,18 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-  AiOutlineShareAlt, // ✅ FIX 1: added import
+  AiOutlineShareAlt,
 } from "react-icons/ai";
 
-import { CgFileDocument, CgGitFork } from "react-icons/cg";
-// import Button from "react-bootstrap/Button"; // optional (currently commented)
+import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  // ✅ FIX 2: scroll listener inside useEffect
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY >= 20) {
@@ -41,24 +38,19 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        {/* BRAND */}
         <Navbar.Brand as={Link} to="/" className="navbar-brand-text">
           Abhay Dhakne
         </Navbar.Brand>
 
-        {/* TOGGLE */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() =>
-            updateExpanded(expand ? false : "expanded")
-          }
+          onClick={() => updateExpanded(expand ? false : "expanded")}
         >
           <span></span>
           <span></span>
           <span></span>
         </Navbar.Toggle>
 
-        {/* MENU */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
 
@@ -86,25 +78,11 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* ✅ SOCIAL PAGE */}
             <Nav.Item>
               <Nav.Link as={Link} to="/social" onClick={() => updateExpanded(false)}>
                 <AiOutlineShareAlt /> Social
               </Nav.Link>
             </Nav.Item>
-
-            {/* GitHub button (optional – currently disabled) */}
-            {/*
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/Ahbay433"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork /> <AiFillStar />
-              </Button>
-            </Nav.Item>
-            */}
 
           </Nav>
         </Navbar.Collapse>
