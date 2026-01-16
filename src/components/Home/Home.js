@@ -4,8 +4,7 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import Techstack from "../About/Techstack";
-import Github from "../About/Github";
+
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -49,6 +48,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
+
       <Home2 />
 
       <Container>
@@ -58,37 +58,41 @@ function Home() {
             <p>
               Feel free to <span className="purple">connect </span>with me
             </p>
+
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
                   href="https://github.com/Ahbay433"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiFillGithub />
                 </a>
               </li>
+
               <li className="social-icons">
                 <a
-                  // href=""
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiOutlineTwitter />
                 </a>
               </li>
+
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/abhay-dhakne-223725293/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <FaLinkedinIn />
                 </a>
               </li>
+
               <li className="social-icons">
                 <a
                   href="https://www.instagram.com/abhay_dhakne_/"
